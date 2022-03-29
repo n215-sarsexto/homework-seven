@@ -1,0 +1,83 @@
+.offers-container {
+  width: $content-width;
+  margin: 0 auto;
+  margin-top: 35px;
+
+  .special-offer {
+    margin-bottom: 55px;
+    width: 750px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+
+    #barcelona {
+      width: 200px;
+      height: 287px;
+      margin-right: 50px;
+      @include location-background(url("../images/barcelona.png"));
+    }
+    #bangkok {
+      width: 200px;
+      height: 287px;
+      margin-right: 50px;
+      @include location-background(url("../images/bangkok.png"));
+    }
+    .offer-content {
+      width: 500px;
+      position: relative;
+
+      .offer-header {
+        text-transform: uppercase;
+        font-family: proxima-nova, sans-serif;
+        .place {
+          font-weight: lighter;
+          font-size: 30px;
+        }
+        .discount {
+          font-size: 20px;
+          color: #ff7d38;
+        }
+        hr {
+          width: 200px;
+          border: 1px solid;
+        }
+      }
+      .offer-body {
+        margin-top: 22px;
+        font-size: 16px;
+        font-family: gill-sans-nova, sans-serif;
+        max-width: 300px;
+      }
+      button {
+        width: 133px;
+        background-color: $site-blue;
+        color: #fff;
+        border-radius: 20px;
+        padding: 10px;
+        border-style: none;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .offers-container {
+    width: 90%;
+    .special-offer {
+      width: 100%;
+      flex-direction: column;
+
+      .offer-content {
+        width: 100%;
+        position: static;
+        button {
+          position: static;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
